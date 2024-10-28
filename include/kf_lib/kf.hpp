@@ -24,6 +24,8 @@ class KF {
     Eigen::VectorXd x_; // State Vector 
     Eigen::MatrixXd P_; // State Cov. Matrix
     Eigen::MatrixXd F_; // State trans. Matrix
+    Eigen::VectorXd u_; // Control input Vector
+    Eigen::MatrixXd B_; // Control input Matrix
     Eigen::MatrixXd Q_; // Cov. Matrix
     Eigen::MatrixXd H_; // Measurement Matrix
     Eigen::MatrixXd R_; // Measurement Cov. Matrix
@@ -65,12 +67,15 @@ class KF {
      * @param x_in Initial state 
      * @param P_in Initial state covariance
      * @param F_in Transition matrix
+     * @param u_in Control input vector
+     * @param B_in Control input matrix
      * @param H_in Measurement matrix
      * @param R_in Measurement covariance matrix
      * @param Q_in Process covariance matrix
      */
     void Init(Eigen::VectorXd& x_in, Eigen::MatrixXd& P_in,
-              Eigen::MatrixXd& F_in, Eigen::MatrixXd& H_in,
+              Eigen::MatrixXd& F_in, Eigen::VectorXd& u_in,
+              Eigen::MatrixXd& B_in, Eigen::MatrixXd& H_in,
               Eigen::MatrixXd& R_in, Eigen::MatrixXd& Q_in);
 
     /**
