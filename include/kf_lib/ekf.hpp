@@ -77,9 +77,16 @@ class EKF {
     void Init(Eigen::VectorXd& x_in, Eigen::MatrixXd& P_in,
               Eigen::MatrixXd& F_in, Eigen::VectorXd& u_in,
               Eigen::MatrixXd& B_in, Eigen::MatrixXd& H_in,
-              Eigen::MatrixXd& R_in, Eigen::MatrixXd& Q_in,
-              std::function<Eigen::VectorXd(const Eigen::VectorXd&)> f_in,
-              std::function<Eigen::VectorXd(const Eigen::VectorXd&)> h_in);
+              Eigen::MatrixXd& R_in, Eigen::MatrixXd& Q_in);
+              // std::function<Eigen::VectorXd(const Eigen::VectorXd&)> f_in,
+              // std::function<Eigen::VectorXd(const Eigen::VectorXd&)> h_in);
+
+    /**
+     * Calculate Jacobian of vector
+     * e.g. state vector x
+     * @param x vector to calculate
+     */
+    Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x);
 
     /**
      * Prediction Step of Extended Kalman Filter
@@ -105,7 +112,12 @@ class EKF {
     Eigen::MatrixXd R_; // Measurement Cov. Matrix
 
     std::function<Eigen::VectorXd(const Eigen::VectorXd&)> f_; // Non-linear State transition function
-    std::function<Eigen::VectorXd(const Eigen::VectorXd&)> h_; // Non-linear measurement function
+    std::function<Eigen::VectorXd(const Eigen::VectorXd&)> h_; // Non-linear measurement function (Jacobian)
+
+    long x_dim_; // Dimension of state vector
+    long H_dim_; // Dimenstion of measurement matrix
+
+    // const float eps = 1e-4;
 };
 
 
