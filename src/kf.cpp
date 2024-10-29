@@ -27,7 +27,7 @@ void KF::Init(Eigen::VectorXd& x_in, Eigen::MatrixXd& P_in,
 void KF::Predict() {
   Eigen::MatrixXd Ft = F_.transpose();
   // x = F*x + B*u
-  x_ = x_ * F_ + B_ * u_;
+  x_ = F_ * x_ + B_ * u_;
 
   // P = F*P*Ft + Q
   P_ = F_ * P_ * Ft + Q_;
