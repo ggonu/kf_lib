@@ -23,7 +23,7 @@ class KF {
     // Constructor
     KF();
     // Destructor
-    ~KF();
+    virtual ~KF();
 
     /**
      * Check the Matrix

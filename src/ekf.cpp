@@ -36,7 +36,7 @@ Eigen::MatrixXd EKF::CalculateJacobian(const Eigen::VectorXd& x) {
   // Perturbation vector
   Eigen::VectorXd x_p = x;
 
-  // Conpute the Jacobian
+  // Compute the Jacobian
   for (int i = 0; i < x_dim_; ++i) {
     float val_ori = x(i); // Store value
 

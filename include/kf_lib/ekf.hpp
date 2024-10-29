@@ -20,10 +20,10 @@
 
 class EKF {
   public:
-    // Constructor
+    // Constructor.
     EKF();
-    // Destructor
-    ~EKF();
+    // Destructor.
+    virtual ~EKF();
 
     /**
      * Check the Matrix
@@ -83,8 +83,10 @@ class EKF {
 
     /**
      * Calculate Jacobian of vector
+     * Specially used for linearizing the Radar measurement
      * e.g. state vector x
-     * @param x vector to calculate
+     * @param x State vector (position and velocity components)
+     * @return Jacobian Matrix for the Radar measurement model
      */
     Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x);
 
