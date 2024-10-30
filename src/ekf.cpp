@@ -4,7 +4,7 @@
 
 
 #define PI 3.14159265
-#define EPS 0.0001
+#define EPS 1e-4
 
 EKF::EKF() {}
 

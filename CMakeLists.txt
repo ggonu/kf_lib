@@ -18,3 +18,5 @@ add_library(${PROJECT_NAME} ${SOURCES})
     # Link to External library(If needed)
 # target_link_libraries(${PROJECT_NAME} <external_lib>)
 target_link_libraries(${PROJECT_NAME} Eigen3::Eigen)
+
+target_include_directories(kf_lib PUBLIC include)
