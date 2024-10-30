@@ -69,5 +69,6 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "__nullptr": "cpp"
-    }
+    },
+    "ros.distro": "humble"
 }

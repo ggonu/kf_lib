@@ -5,7 +5,7 @@
  *      - scalars: lowercase
  *      - vectors: lowercase
  *      - matrices: uppercase
- * 
+ *
  *    - functions
  *      - estimation
  *      - update
@@ -41,7 +41,7 @@ class EKF {
 
     /**
      * Check Vector and Matrices of the Kalman Filter
-     * @param x_ Initial state 
+     * @param x_ Initial state
      * @param P_ Initial state covariance
      * @param F_ Transition matrix
      * @param u_ Control input vector
@@ -63,7 +63,7 @@ class EKF {
 
     /**
      * Initialize the Extended Kalman Filter
-     * @param x_in Initial state 
+     * @param x_in Initial state
      * @param P_in Initial state covariance
      * @param F_in Transition matrix
      * @param u_in Control input vector
@@ -104,7 +104,7 @@ class EKF {
 
 
   private:
-    Eigen::VectorXd x_; // State Vector 
+    Eigen::VectorXd x_; // State Vector
     Eigen::MatrixXd P_; // State Cov. Matrix
     Eigen::MatrixXd F_; // State trans. Matrix
     Eigen::VectorXd u_; // Control input Vector
