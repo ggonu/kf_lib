@@ -16,19 +16,15 @@ KFProcess::KFProcess() {
   H_jacob_ = Eigen::MatrixXd(3, 4);
 
   // Measurement covariance matrix
-    // LiDAR
+  // LiDAR
   R_lidar_ << 0.0225, 0.0,
               0.0, 0.0225;
-    // Radar
+  // Radar
   R_radar_ << 0.09, 0.0, 0.0,
               0.0, 0.0009, 0.0,
               0.0, 0.0, 0.09;
-
-
 }
 
 KFProcess::~KFProcess() {}
 
-void KFProcess::ProcessMeasurement() {
-
-}
+void KFProcess::ProcessMeasurement() {}
