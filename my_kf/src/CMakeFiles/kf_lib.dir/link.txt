@@ -1,0 +1,2 @@
+/usr/bin/ar qc libkf_lib.a CMakeFiles/kf_lib.dir/CMakeFiles/3.25.0/CompilerIdCXX/CMakeCXXCompilerId.cpp.o CMakeFiles/kf_lib.dir/ekf.cpp.o CMakeFiles/kf_lib.dir/ekf_modified.cpp.o CMakeFiles/kf_lib.dir/kf.cpp.o CMakeFiles/kf_lib.dir/kf_funcs.cpp.o CMakeFiles/kf_lib.dir/kf_process.cpp.o CMakeFiles/kf_lib.dir/main.cpp.o
+/usr/bin/ranlib libkf_lib.a

@@ -1,0 +1,3 @@
+/home/go/kf_lib/my_kf/src/CMakeFiles/kf_lib.dir
+/home/go/kf_lib/my_kf/src/CMakeFiles/edit_cache.dir
+/home/go/kf_lib/my_kf/src/CMakeFiles/rebuild_cache.dir
